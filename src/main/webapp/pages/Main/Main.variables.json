@@ -1,1 +1,28 @@
-{ }
+{
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1505543966694",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "name",
+      "value" : "bind:Variables.loggedInUser.dataSet.name",
+      "type" : "string"
+    } ],
+    "type" : "string",
+    "service" : "MyJavaService",
+    "operation" : "sampleJavaOperation",
+    "operationId" : "MyJavaController_sampleJavaOperation",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "MyJava"
+  }
+}
