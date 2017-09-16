@@ -1,0 +1,39 @@
+<wm-page data-ng-controller="googleapisPageController" pagetitle="Googleapis" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3 control-label" name="label1" caption="Source"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="text1"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-composite name="composite2">
+                <wm-label class="col-md-3 control-label" name="label2" caption="Destination"></wm-label>
+                <wm-container class="col-md-9" name="container2">
+                    <wm-text name="text2"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-button class="btn-default" caption="Get Distance" type="button" margin="unset 0.5em" name="button1" on-click="Variables.GoogleapisInvoke.invoke()"></wm-button>
+            <wm-label padding="unset 0.5em" name="label3" caption="bind:Variables.GoogleapisInvoke.dataSet.route.leg.distance.text"></wm-label>
+            <wm-table name="googleapisTable1" title="" dataset="bind:Variables.GoogleapisInvoke.dataSet" navigation="Basic">
+                <wm-table-column binding="status" caption="Status" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.summary" caption="Route Summary" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.copyrights" caption="Route Copyrights" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.bounds.southwest.lng" caption="Route.bounds.southwest Lng" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.bounds.southwest.lat" caption="Route.bounds.southwest Lat" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.bounds.northeast.lng" caption="Route.bounds.northeast Lng" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.bounds.northeast.lat" caption="Route.bounds.northeast Lat" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.overview_polyline.points" caption="Route.overview_polyline Points" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.leg.start_address" caption="Route.leg Start Address" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="route.leg.end_address" caption="Route.leg End Address" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+            </wm-table>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view1">
+        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+            on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
+</wm-page>

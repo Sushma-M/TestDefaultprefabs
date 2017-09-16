@@ -15,6 +15,10 @@
   "type" : "FOOTER",
   "params" : [ ]
 }, {
+  "name" : "googleapis",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "header",
   "type" : "HEADER",
   "params" : [ ]

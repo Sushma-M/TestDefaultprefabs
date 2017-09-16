@@ -1,0 +1,54 @@
+{
+  "GoogleapisInvoke" : {
+    "_id" : "wm-GoogleapisInvoke-wm.ServiceVariable-1505538932050",
+    "name" : "GoogleapisInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "bind:Widgets.text1.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "bind:Widgets.text2.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "googleapis.RootResponse",
+    "service" : "googleapis",
+    "operation" : "invoke",
+    "operationId" : "googleapis_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Actions.notificationAction1.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual"
+  },
+  "notificationAction1" : {
+    "_id" : "wm-notificationAction1-wm.NotificationVariable-1505539139588",
+    "name" : "notificationAction1",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "success",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  }
+}

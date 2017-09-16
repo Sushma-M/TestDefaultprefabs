@@ -15,6 +15,17 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_googleapis" : {
+    "_id" : "wm-goToPage_googleapis-wm.NavigationVariable-1505538894175",
+    "name" : "goToPage_googleapis",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "googleapis",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
