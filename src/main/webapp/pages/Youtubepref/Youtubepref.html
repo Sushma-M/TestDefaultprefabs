@@ -1,0 +1,17 @@
+<wm-page data-ng-controller="YoutubeprefPageController" pagetitle="Youtubepref" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3 control-label" name="label1" caption="Enter URL"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="text1"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-label padding="unset 0.5em" name="label2" caption="Ex: http://www.youtube.com/embed/N1umLw5I3As"></wm-label>
+            <wm-prefab prefabname="youtube" name="youtube1" youtubeurl="bind:Widgets.text1.datavalue"></wm-prefab>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
